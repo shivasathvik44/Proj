@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Questions Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f9;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .options label {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    .correct-answer {
+      display: none;
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interview Questions Quiz</h1>
+  <form id="quizForm">
+
+    <div class="question">
+      <p>1. What is your greatest strength?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> Problem-solving skills</label>
+        <label><input type="radio" name="q1"> Procrastination</label>
+        <label><input type="radio" name="q1"> Laziness</label>
+        <label><input type="radio" name="q1"> None of the above</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Problem-solving skills</div>
+    </div>
+
+    <div class="question">
+      <p>2. Where do you see yourself in 5 years?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> In the same position</label>
+        <label><input type="radio" name="q2"> Growing professionally</label>
+        <label><input type="radio" name="q2"> Retired</label>
+        <label><input type="radio" name="q2"> No plans</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Growing professionally</div>
+    </div>
+
+    <div class="question">
+      <p>3. Why should we hire you?</p>
+      <div class="options">
+        <label><input type="radio" name="q3"> I need money</label>
+        <label><input type="radio" name="q3"> I am suitable for the role</label>
+        <label><input type="radio" name="q3"> Everyone hires me</label>
+        <label><input type="radio" name="q3"> I have no other options</label>
+      </div>
+      <div class="correct-answer">Correct Answer: I am suitable for the role</div>
+    </div>
+
+    <div class="question">
+      <p>4. What is your weakness?</p>
+      <div class="options">
+        <label><input type="radio" name="q4"> Perfectionism</label>
+        <label><input type="radio" name="q4"> Laziness</label>
+        <label><input type="radio" name="q4"> No weakness</label>
+        <label><input type="radio" name="q4"> Dishonesty</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Perfectionism</div>
+    </div>
+
+    <div class="question">
+      <p>5. Describe a challenging situation you faced at work.</p>
+      <div class="options">
+        <label><input type="radio" name="q5"> Ignored the problem</label>
+        <label><input type="radio" name="q5"> Tackled it efficiently</label>
+        <label><input type="radio" name="q5"> Complained</label>
+        <label><input type="radio" name="q5"> Escaped it</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Tackled it efficiently</div>
+    </div>
+
+    <div class="question">
+      <p>6. How do you handle stress?</p>
+      <div class="options">
+        <label><input type="radio" name="q6"> Avoid it</label>
+        <label><input type="radio" name="q6"> Manage calmly</label>
+        <label><input type="radio" name="q6"> Panic</label>
+        <label><input type="radio" name="q6"> Complain</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Manage calmly</div>
+    </div>
+
+    <div class="question">
+      <p>7. What motivates you?</p>
+      <div class="options">
+        <label><input type="radio" name="q7"> Money only</label>
+        <label><input type="radio" name="q7"> Learning and growth</label>
+        <label><input type="radio" name="q7"> Gossip</label>
+        <label><input type="radio" name="q7"> Laziness</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Learning and growth</div>
+    </div>
+
+    <div class="question">
+      <p>8. How do you handle criticism?</p>
+      <div class="options">
+        <label><input type="radio" name="q8"> Ignore it</label>
+        <label><input type="radio" name="q8"> Accept constructively</label>
+        <label><input type="radio" name="q8"> Argue</label>
+        <label><input type="radio" name="q8"> Feel offended</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Accept constructively</div>
+    </div>
+
+    <div class="question">
+      <p>9. Describe a time you worked in a team.</p>
+      <div class="options">
+        <label><input type="radio" name="q9"> Took no part</label>
+        <label><input type="radio" name="q9"> Collaborated effectively</label>
+        <label><input type="radio" name="q9"> Ignored team members</label>
+        <label><input type="radio" name="q9"> Complained</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Collaborated effectively</div>
+    </div>
+
+    <div class="question">
+      <p>10. Why did you leave your last job?</p>
+      <div class="options">
+        <label><input type="radio" name="q10"> Personal growth</label>
+        <label><input type="radio" name="q10"> To escape work</label>
+        <label><input type="radio" name="q10"> Laziness</label>
+        <label><input type="radio" name="q10"> Conflict avoidance</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Personal growth</div>
+    </div>
+
+    <!-- Q11 - Q20 in same format -->
+    <div class="question">
+      <p>11. How do you prioritize tasks?</p>
+      <div class="options">
+        <label><input type="radio" name="q11"> Randomly</label>
+        <label><input type="radio" name="q11"> Based on importance</label>
+        <label><input type="radio" name="q11"> Ignore deadlines</label>
+        <label><input type="radio" name="q11"> Delegate all</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Based on importance</div>
+    </div>
+
+    <div class="question">
+      <p>12. Tell me about yourself.</p>
+      <div class="options">
+        <label><input type="radio" name="q12"> Personal hobbies only</label>
+        <label><input type="radio" name="q12"> Professional and relevant info</label>
+        <label><input type="radio" name="q12"> Irrelevant stories</label>
+        <label><input type="radio" name="q12"> Family gossip</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Professional and relevant info</div>
+    </div>
+
+    <div class="question">
+      <p>13. How do you deal with conflict?</p>
+      <div class="options">
+        <label><input type="radio" name="q13"> Avoid it</label>
+        <label><input type="radio" name="q13"> Address calmly</label>
+        <label><input type="radio" name="q13"> Escalate</label>
+        <label><input type="radio" name="q13"> Blame others</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Address calmly</div>
+    </div>
+
+    <div class="question">
+      <p>14. Why do you want this job?</p>
+      <div class="options">
+        <label><input type="radio" name="q14"> Passion for role</label>
+        <label><input type="radio" name="q14"> Just for salary</label>
+        <label><input type="radio" name="q14"> Friends told me</label>
+        <label><input type="radio" name="q14"> No reason</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Passion for role</div>
+    </div>
+
+    <div class="question">
+      <p>15. What makes you unique?</p>
+      <div class="options">
+        <label><input type="radio" name="q15"> Skills and experiences</label>
+        <label><input type="radio" name="q15"> Same as everyone</label>
+        <label><input type="radio" name="q15"> Just lucky</label>
+        <label><input type="radio" name="q15"> Nothing</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Skills and experiences</div>
+    </div>
+
+    <div class="question">
+      <p>16. How do you keep yourself motivated?</p>
+      <div class="options">
+        <label><input type="radio" name="q16"> Ignore goals</label>
+        <label><input type="radio" name="q16"> Set targets</label>
+        <label><input type="radio" name="q16"> Rely on luck</label>
+        <label><input type="radio" name="q16"> Copy others</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Set targets</div>
+    </div>
+
+    <div class="question">
+      <p>17. How do you handle deadlines?</p>
+      <div class="options">
+        <label><input type="radio" name="q17"> Ignore them</label>
+        <label><input type="radio" name="q17"> Plan and manage</label>
+        <label><input type="radio" name="q17"> Rush last minute</label>
+        <label><input type="radio" name="q17"> Complain</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Plan and manage</div>
+    </div>
+
+    <div class="question">
+      <p>18. What is your preferred working style?</p>
+      <div class="options">
+        <label><input type="radio" name="q18"> Independent and collaborative</label>
+        <label><input type="radio" name="q18"> Lazy</label>
+        <label><input type="radio" name="q18"> Avoid teamwork</label>
+        <label><input type="radio" name="q18"> Procrastinate</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Independent and collaborative</div>
+    </div>
+
+    <div class="question">
+      <p>19. How do you deal with failure?</p>
+      <div class="options">
+        <label><input type="radio" name="q19"> Give up</label>
+        <label><input type="radio" name="q19"> Learn and improve</label>
+        <label><input type="radio" name="q19"> Blame others</label>
+        <label><input type="radio" name="q19"> Ignore it</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Learn and improve</div>
+    </div>
+
+    <div class="question">
+      <p>20. Why do you want to work with us?</p>
+      <div class="options">
+        <label><input type="radio" name="q20"> Align with company values</label>
+        <label><input type="radio" name="q20"> Just for money</label>
+        <label><input type="radio" name="q20"> Friends told me</label>
+        <label><input type="radio" name="q20"> No reason</label>
+      </div>
+      <div class="correct-answer">Correct Answer: Align with company values</div>
+    </div>
+
+    <button type="button" onclick="showAnswers()">Submit</button>
+  </form>
+
+  <script>
+    function showAnswers() {
+      const answers = document.querySelectorAll('.correct-answer');
+      answers.forEach(ans => {
+        ans.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE 20 MCQs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .correct-answer {
+            display: none;
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>GATE Exam - 20 MCQs</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. The time complexity of binary search algorithm is:</p>
+            <div class="options">
+                <label><input type="radio" name="q1"> O(n)</label>
+                <label><input type="radio" name="q1"> O(log n)</label>
+                <label><input type="radio" name="q1"> O(n log n)</label>
+                <label><input type="radio" name="q1"> O(1)</label>
+            </div>
+            <div class="correct-answer">Correct Answer: O(log n)</div>
+        </div>
+
+        <div class="question">
+            <p>2. The Laplace transform of sin(at) is:</p>
+            <div class="options">
+                <label><input type="radio" name="q2"> a/(s² + a²)</label>
+                <label><input type="radio" name="q2"> s/(s² + a²)</label>
+                <label><input type="radio" name="q2"> 1/(s² + a²)</label>
+                <label><input type="radio" name="q2"> s/(s² − a²)</label>
+            </div>
+            <div class="correct-answer">Correct Answer: a/(s² + a²)</div>
+        </div>
+
+        <div class="question">
+            <p>3. In a relational database, which normal form eliminates transitive dependency?</p>
+            <div class="options">
+                <label><input type="radio" name="q3"> 1NF</label>
+                <label><input type="radio" name="q3"> 2NF</label>
+                <label><input type="radio" name="q3"> 3NF</label>
+                <label><input type="radio" name="q3"> BCNF</label>
+            </div>
+            <div class="correct-answer">Correct Answer: 3NF</div>
+        </div>
+
+        <div class="question">
+            <p>4. The Fourier transform of δ(t) is:</p>
+            <div class="options">
+                <label><input type="radio" name="q4"> 1</label>
+                <label><input type="radio" name="q4"> 0</label>
+                <label><input type="radio" name="q4"> ∞</label>
+                <label><input type="radio" name="q4"> δ(f)</label>
+            </div>
+            <div class="correct-answer">Correct Answer: 1</div>
+        </div>
+
+        <div class="question">
+            <p>5. Which data structure is used in recursive function calls?</p>
+            <div class="options">
+                <label><input type="radio" name="q5"> Queue</label>
+                <label><input type="radio" name="q5"> Array</label>
+                <label><input type="radio" name="q5"> Stack</label>
+                <label><input type="radio" name="q5"> Linked List</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Stack</div>
+        </div>
+
+        <div class="question">
+            <p>6. Which modulation technique has the highest bandwidth efficiency?</p>
+            <div class="options">
+                <label><input type="radio" name="q6"> AM</label>
+                <label><input type="radio" name="q6"> FM</label>
+                <label><input type="radio" name="q6"> QAM</label>
+                <label><input type="radio" name="q6"> ASK</label>
+            </div>
+            <div class="correct-answer">Correct Answer: QAM</div>
+        </div>
+
+        <div class="question">
+            <p>7. In operating systems, thrashing is related to:</p>
+            <div class="options">
+                <label><input type="radio" name="q7"> Deadlock</label>
+                <label><input type="radio" name="q7"> Paging</label>
+                <label><input type="radio" name="q7"> Scheduling</label>
+                <label><input type="radio" name="q7"> Semaphores</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Paging</div>
+        </div>
+
+        <div class="question">
+            <p>8. Which sorting algorithm is best for nearly sorted data?</p>
+            <div class="options">
+                <label><input type="radio" name="q8"> Quick Sort</label>
+                <label><input type="radio" name="q8"> Merge Sort</label>
+                <label><input type="radio" name="q8"> Insertion Sort</label>
+                <label><input type="radio" name="q8"> Heap Sort</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Insertion Sort</div>
+        </div>
+
+        <div class="question">
+            <p>9. In control systems, a system is stable if:</p>
+            <div class="options">
+                <label><input type="radio" name="q9"> All poles in RHS</label>
+                <label><input type="radio" name="q9"> All poles in LHS</label>
+                <label><input type="radio" name="q9"> Zeros in LHS</label>
+                <label><input type="radio" name="q9"> Poles on imaginary axis</label>
+            </div>
+            <div class="correct-answer">Correct Answer: All poles in LHS</div>
+        </div>
+
+        <div class="question">
+            <p>10. Which protocol is used to find the MAC address from IP address?</p>
+            <div class="options">
+                <label><input type="radio" name="q10"> RARP</label>
+                <label><input type="radio" name="q10"> ARP</label>
+                <label><input type="radio" name="q10"> ICMP</label>
+                <label><input type="radio" name="q10"> DNS</label>
+            </div>
+            <div class="correct-answer">Correct Answer: ARP</div>
+        </div>
+
+        <div class="question">
+            <p>11. Which logic gate is known as the universal gate?</p>
+            <div class="options">
+                <label><input type="radio" name="q11"> AND</label>
+                <label><input type="radio" name="q11"> OR</label>
+                <label><input type="radio" name="q11"> NAND</label>
+                <label><input type="radio" name="q11"> XOR</label>
+            </div>
+            <div class="correct-answer">Correct Answer: NAND</div>
+        </div>
+
+        <div class="question">
+            <p>12. In compiler design, which phase removes left recursion?</p>
+            <div class="options">
+                <label><input type="radio" name="q12"> Lexical Analysis</label>
+                <label><input type="radio" name="q12"> Syntax Analysis</label>
+                <label><input type="radio" name="q12"> Semantic Analysis</label>
+                <label><input type="radio" name="q12"> Code Generation</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Syntax Analysis</div>
+        </div>
+
+        <div class="question">
+            <p>13. In digital communication, the Nyquist rate is:</p>
+            <div class="options">
+                <label><input type="radio" name="q13"> Twice the bandwidth</label>
+                <label><input type="radio" name="q13"> Equal to bandwidth</label>
+                <label><input type="radio" name="q13"> Half the bandwidth</label>
+                <label><input type="radio" name="q13"> Four times bandwidth</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Twice the bandwidth</div>
+        </div>
+
+        <div class="question">
+            <p>14. In microprocessors, which interrupt has the highest priority?</p>
+            <div class="options">
+                <label><input type="radio" name="q14"> RST7.5</label>
+                <label><input type="radio" name="q14"> RST6.5</label>
+                <label><input type="radio" name="q14"> TRAP</label>
+                <label><input type="radio" name="q14"> INTR</label>
+            </div>
+            <div class="correct-answer">Correct Answer: TRAP</div>
+        </div>
+
+        <div class="question">
+            <p>15. Which scheduling algorithm may cause starvation?</p>
+            <div class="options">
+                <label><input type="radio" name="q15"> FCFS</label>
+                <label><input type="radio" name="q15"> Round Robin</label>
+                <label><input type="radio" name="q15"> Priority Scheduling</label>
+                <label><input type="radio" name="q15"> SJF</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Priority Scheduling</div>
+        </div>
+
+        <div class="question">
+            <p>16. Which of the following is not a deterministic algorithm?</p>
+            <div class="options">
+                <label><input type="radio" name="q16"> Dijkstra’s Algorithm</label>
+                <label><input type="radio" name="q16"> Kruskal’s Algorithm</label>
+                <label><input type="radio" name="q16"> Randomized QuickSort</label>
+                <label><input type="radio" name="q16"> Prim’s Algorithm</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Randomized QuickSort</div>
+        </div>
+
+        <div class="question">
+            <p>17. In probability, variance is defined as:</p>
+            <div class="options">
+                <label><input type="radio" name="q17"> E[X]</label>
+                <label><input type="radio" name="q17"> E[X²] − (E[X])²</label>
+                <label><input type="radio" name="q17"> √E[X²]</label>
+                <label><input type="radio" name="q17"> E[X²]</label>
+            </div>
+            <div class="correct-answer">Correct Answer: E[X²] − (E[X])²</div>
+        </div>
+
+        <div class="question">
+            <p>18. In graph theory, a tree with n vertices has how many edges?</p>
+            <div class="options">
+                <label><input type="radio" name="q18"> n</label>
+                <label><input type="radio" name="q18"> n−1</label>
+                <label><input type="radio" name="q18"> 2n</label>
+                <label><input type="radio" name="q18"> n+1</label>
+            </div>
+            <div class="correct-answer">Correct Answer: n−1</div>
+        </div>
+
+        <div class="question">
+            <p>19. In electrical machines, the slip of an induction motor is:</p>
+            <div class="options">
+                <label><input type="radio" name="q19"> (Ns − N)/Ns</label>
+                <label><input type="radio" name="q19"> (N − Ns)/Ns</label>
+                <label><input type="radio" name="q19"> N/Ns</label>
+                <label><input type="radio" name="q19"> Ns/N</label>
+            </div>
+            <div class="correct-answer">Correct Answer: (Ns − N)/Ns</div>
+        </div>
+
+        <div class="question">
+            <p>20. Which of the following is not a type of semiconductor material?</p>
+            <div class="options">
+                <label><input type="radio" name="q20"> Silicon</label>
+                <label><input type="radio" name="q20"> Germanium</label>
+                <label><input type="radio" name="q20"> Gallium Arsenide</label>
+                <label><input type="radio" name="q20"> Copper</label>
+            </div>
+            <div class="correct-answer">Correct Answer: Copper</div>
+        </div>
+
+        <button type="button" onclick="showAnswers()">Submit</button>
+    </form>
+
+    <script>
+        function showAnswers() {
+            const answers = document.querySelectorAll('.correct-answer');
+            answers.forEach(ans => {
+                ans.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrusri Mitra - Online Repository</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+                        url('../clg/clg1.jpg'); /* Using the clg1.jpg from the clg folder */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2); /* Reduced black overlay for better backdrop filter effect */
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 30px;
+        }
+
+        .nav-button {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 12px 24px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 60px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .card-content {
+            margin-top: 10px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+        }
+
+        .resource-type {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin-top: 60px;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .nav-button {
+                width: 200px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 40px 20px;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .badge {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="../Main page/index.html" class="nav-button">Home</a>
+            <a href="../Main page/about.html" class="nav-button">About Us</a>
+            <a href="#" class="nav-button">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <h1 class="main-title">Matrusri Mitra</h1>
+        <h2 class="section-subtitle">Online Repository</h2>
+        
+        <div class="cards-grid">
+            <a href="Faculty/faculty.html" class="card">
+                <div class="badge">1</div>
+                <div class="card-content">
+                    <div class="card-title">FACULTY INFORMATION</div>
+                    <div class="card-description">Comprehensive directory of faculty members with their qualifications, specializations, and contact information</div>
+                    <div class="resource-type">Faculty</div>
+                </div>
+            </a>
+            
+            <a href="NOtes/notes.html" class="card">
+                <div class="badge">2</div>
+                <div class="card-content">
+                    <div class="card-title">STUDY NOTES & RESOURCES</div>
+                    <div class="card-description">Extensive collection of study materials, lecture notes, and educational resources for all subjects</div>
+                    <div class="resource-type">Notes</div>
+                </div>
+            </a>
+            
+            <a href="Prev Papers/qp.html" class="card">
+                <div class="badge">3</div>
+                <div class="card-content">
+                    <div class="card-title">PREVIOUS YEAR PAPERS</div>
+                    <div class="card-description">Complete archive of previous year question papers with solutions for exam preparation</div>
+                    <div class="resource-type">Papers</div>
+                </div>
+            </a>
+            
+            <a href="NOtes/notes.html" class="card">
+                <div class="badge">4</div>
+                <div class="card-content">
+                    <div class="card-title">ALUMNI SUPPORT</div>
+                    <div class="card-description">Connect with graduated students for guidance, mentorship, and career advice</div>
+                    <div class="resource-type">Support</div>
+                </div>
+            </a>
+            
+            <a href="Faculty/faculty.html" class="card">
+                <div class="badge">5</div>
+                <div class="card-content">
+                    <div class="card-title">PROJECT REPOSITORY</div>
+                    <div class="card-description">Collection of student projects, research papers, and innovative academic work</div>
+                    <div class="resource-type">Projects</div>
+                </div>
+            </a>
+            
+            <a href="Syllabus/final.html" class="card">
+                <div class="badge">6</div>
+                <div class="card-content">
+                    <div class="card-title">ACADEMIC SYLLABUS</div>
+                    <div class="card-description">Complete course syllabi, timetables, and academic calendar for all semesters</div>
+                    <div class="resource-type">Syllabus</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">Comprehensive digital repository - Your one-stop destination for all academic resources</p>
+    </footer>
+</body>
+</html>
